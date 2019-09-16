@@ -44,8 +44,8 @@ class PapaiNoel {
     }
 
     private synchronized void acordarTrabalhar() throws InterruptedException {
+        acordar();
         while ((renas.size() == 9 || elfos.size() == 3) && ano <= 2025) {
-            acordar();
             if (renas.size() == 9) {
                 Thread threadTreno = new Thread(new Treno());
                 threadTreno.start();
